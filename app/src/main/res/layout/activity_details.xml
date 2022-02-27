@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/name_Detail_ID"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name" />
+
+            <TextView
+                android:id="@+id/quantity_Detail_ID"
+                android:textStyle="italic"
+                android:textSize="14sp"
+                android:layout_below="@+id/name_Detail_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="quantity" />
+
+            <TextView
+                android:id="@+id/date_Detail_ID"
+                android:textStyle="italic"
+                android:textSize="14sp"
+                android:layout_below="@+id/quantity_Detail_ID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="date" />
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                android:layout_alignBottom="@id/date_Detail_ID"
+                android:layout_alignParentEnd="true"
+                android:layout_height="wrap_content" >
+
+                <Button
+                    android:id="@+id/edit_Detail_ID"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:drawable/ic_menu_edit" />
+
+                <Button
+                    android:id="@+id/delete_Detail_ID"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@android:drawable/ic_delete" />
+            </TableRow>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
